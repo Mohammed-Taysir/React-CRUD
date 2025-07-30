@@ -9,13 +9,15 @@ function App() {
   return (
     <>
       <Navbar />
-        <Routes>
-          <Route path = "/" element = {<Home />} />
-          <Route path = "/users" element = {<Home />} />
-          <Route path = "/add" element = {<Create />} />
-          <Route path = "/about" element = {<About />} />
-          
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path = "/" element = {<Home />} />
+            <Route path = "/users" element = {<Home />} />
+            <Route path = "/add" element = {<Create />} />
+            <Route path = "/about" element = {<About />} />
+            
+          </Routes>
+        </div>
 
       <Footer />
     </>
