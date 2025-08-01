@@ -8,7 +8,7 @@ function useFetch(path) {
     const getUsers = async() => {
         try {
             const response = await axios.get(`${import.meta.env.VITE_BURL}/${path}`);
-            setData(response.data.users);
+            setData(response.data);
         }catch(err) {
             setError(err);
         }finally {
@@ -19,7 +19,7 @@ function useFetch(path) {
     useEffect(()=> {
         getUsers();
     }, []);
-  return {data, error, isLoading}
+  return {data, error, isLoading, setData}
 }
 
 export default useFetch
